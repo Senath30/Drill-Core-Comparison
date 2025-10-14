@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Comparison Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drill Core Comparison Grid</h1>
+        
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-group">
+                <h3>Dry Images (Column 1)</h3>
+                <input type="file" id="dryImages" multiple accept="image/*" class="file-input">
+                <label for="dryImages" class="file-label">Choose 15 Dry Images</label>
+            </div>
+            
+            <div class="upload-group">
+                <h3>Wet Images (Column 2)</h3>
+                <input type="file" id="wetImages" multiple accept="image/*" class="file-input">
+                <label for="wetImages" class="file-label">Choose 15 Wet Images</label>
+            </div>
+            
+            <button id="generateGrid" class="generate-btn">Generate Comparison Grid</button>
+        </div>
+
+        <!-- Comparison Grid -->
+        <div id="comparisonGrid" class="comparison-grid" style="display: none;">
+            <div class="grid-header">
+                <div class="column-label">DRY</div>
+                <div class="column-label">WET</div>
+            </div>
+            
+            <div class="grid-container">
+                <div class="image-grid" id="imageGrid">
+                    <!-- Grid rows will be generated here -->
+                </div>
+                
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
